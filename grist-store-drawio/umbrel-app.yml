@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: drawio
+id: grist-store-drawio
 category: files
 name: draw.io
 version: "32.6.9"
