@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: taxhacker
+category: finance
+name: TaxHacker
+version: "0.8.5"
+tagline: AI bookkeeping for receipts and invoices
+description: >-
+  TaxHacker reads receipts and invoices, extracts dates, amounts, taxes and
+  vendors, and keeps them searchable and exportable. Bring your own LLM
+  provider key in the app settings.
+developer: Vasily Zubarev
+website: https://taxhacker.app/
+dependencies: []
+repo: https://github.com/vas3k/TaxHacker
+support: https://github.com/vas3k/TaxHacker/issues
+port: 7333
+icon: https://raw.githubusercontent.com/vas3k/TaxHacker/main/public/logo/512.png
+releaseNotes: >-
+  Tracks upstream vas3k/TaxHacker 0.8.5 (2026-07-20) instead of 0.6.0.
+  Postgres 17 volume is compatible with the 0.6.0 data directory.
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: supernitin
+submission: https://github.com/supernitin/grist-umbrel-store

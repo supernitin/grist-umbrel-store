@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: drawio
+category: files
+name: draw.io
+version: "32.6.9"
+tagline: Diagramming and whiteboarding, in the browser
+description: >-
+  draw.io creates flowcharts, network diagrams, org charts and mind maps.
+  Diagrams stay in your browser or in files you export; the container holds
+  no user data.
+developer: JGraph Ltd.
+website: https://www.drawio.com/
+dependencies: []
+repo: https://github.com/jgraph/drawio
+support: https://github.com/jgraph/drawio/issues
+port: 5023
+icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-drawio/logo.png
+releaseNotes: >-
+  Tracks upstream jgraph/drawio 32.6.9 (2026-10-30) instead of the 24.7.17
+  pinned in Denny's store. No database, nothing to migrate.
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: supernitin
+submission: https://github.com/supernitin/grist-umbrel-store

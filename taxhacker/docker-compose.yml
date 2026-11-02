@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: taxhacker_app_1
+      APP_PORT: 7331
+
+  app:
+    image: ghcr.io/vas3k/taxhacker:0.8.5
+    environment:
+      NODE_ENV: production
+      SELF_HOSTED_MODE: "true"
+      UPLOAD_PATH: /app/data/uploads
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/taxhacker
+    volumes:
+      - ${APP_DATA_DIR}/data/app_data:/app/data
+    restart: on-failure
+    depends_on:
+      - postgres
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: "local"
+      options:
+        max-size: "100M"
+        max-file: "3"
+
+  postgres:
+    image: postgres:17.5
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: taxhacker
+    volumes:
+      - ${APP_DATA_DIR}/data/pgdata:/var/lib/postgresql/data
+    restart: on-failure
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: "local"
+      options:
+        max-size: "100M"
+        max-file: "3"
