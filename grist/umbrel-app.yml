@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: grist
+category: files
+name: Grist
+version: "1.7.22"
+tagline: Relational spreadsheet with a full REST API
+description: >-
+  Grist combines a spreadsheet grid with a database: typed columns, linked
+  tables, formulas, and a REST API that agents can use to create tables and
+  read or write records. This store pins the current upstream release.
+developer: Grist Labs
+website: https://www.getgrist.com/
+dependencies: []
+repo: https://github.com/gristlabs/grist-core
+support: https://github.com/gristlabs/grist-core/issues
+port: 8484
+icon: https://raw.githubusercontent.com/gristlabs/grist-core/main/static/icons/grist.png
+releaseNotes: >-
+  v1.7.22 (2026-10-29) moves the image to Node.js 22.23.4, fixing
+  CVE-2026-111497 (remote code execution through brotli-compressed responses).
+  Six releases past the community store's 1.7.16 pin.
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: supernitin
+submission: https://github.com/supernitin/grist-umbrel-store
